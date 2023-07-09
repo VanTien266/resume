@@ -6,7 +6,7 @@ const Experiences = (props: any) => {
   const { experienceList } = props;
 
   return (
-    <div className="flex flex-col mb-11 pr-6">
+    <div className="flex flex-col mb-2 pr-6">
       <div className="flex justify-start">
         <div className="w-11 h-11 rounded-full border-2 border-[#313c4e] flex justify-center items-center mr-3">
           <BriefcaseIcon className="w-7 h-7 fill-[#313c4e]" />
@@ -17,7 +17,7 @@ const Experiences = (props: any) => {
       </div>
       <div>
         {experienceList.map((item: any) => (
-          <div key={item.key} className="p-2 my-2 text-base">
+          <div key={item.key} className="px-2 py-1 text-base">
             <div className="text-2xl font-bold">{item.role}</div>
             <div className="text-2xl">{item.company}</div>
             <div className="italic text-[#449399]">

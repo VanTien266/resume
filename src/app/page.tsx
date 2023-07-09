@@ -11,13 +11,13 @@ export default function Home() {
     <main className="flex min-h-screen flex-col items-center justify-between px-3 pt-3 md:px-5 md:pt-5 lg:px-9 lg:pt-9 bg-black font text-lg">
       <div className="w-full h-full p-3 md:p-5 lg:p-9 bg-white text-black">
         <Personal />
-        <div className="flex">
+        <div className="flex gap-2">
           <div className="w-3.5"></div>
-          <div className="flex flex-col w-full md:w-2/3">
+          <div className="flex flex-col w-full md:w-2/3 py-4">
             <Experiences />
             <Educations />
           </div>
-          <div className="flex flex-col w-full md:w-1/3">
+          <div className="flex flex-col w-full md:w-1/3 bg-[#ebebeb] p-4">
             <Skills />
             <PersonalProjects />
             <Achivements />

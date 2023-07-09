@@ -11,7 +11,7 @@ import Image from 'next/image';
 const Personal = (props: any) => {
   const { personalInformations } = props;
   return (
-    <div className="flex gap-2 mb-11 h-96">
+    <div className="flex gap-2 mb-2 h-96">
       <div className="bg-[#313c4e] w-3.5 rounded-xl"></div>
       <div className="flex w-full md:w-2/3 p-5 items-center bg-[#ebebeb] rounded-l-lg">
         <div className="rounded-full border-2 border-[#449399]">
@@ -20,7 +20,7 @@ const Personal = (props: any) => {
             alt="My Image"
             width={210}
             height={210}
-            className="rounded-full w-52 h-52"
+            className="rounded-full"
           />
         </div>
         <div className="flex flex-1 flex-col px-4">

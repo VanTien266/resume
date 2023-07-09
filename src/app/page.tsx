@@ -12,11 +12,12 @@ export default function Home() {
       <div className="w-full h-full p-3 md:p-5 lg:p-9 bg-white text-black">
         <Personal />
         <div className="flex">
-          <div className="flex flex-col w-full md:w-1/2">
+          <div className="w-3.5"></div>
+          <div className="flex flex-col w-full md:w-2/3">
             <Experiences />
             <Educations />
           </div>
-          <div className="flex flex-col w-full md:w-1/2">
+          <div className="flex flex-col w-full md:w-1/3">
             <Skills />
             <PersonalProjects />
             <Achivements />

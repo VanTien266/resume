@@ -43,7 +43,13 @@ const Personal = (props: any) => {
               {item.icon}
             </div>
             <p className="text-base text-white flex items-center justify-center h-full">
-              {item.text}
+              {item.ref ? (
+                <a href={item.ref} target="_blank">
+                  {item.text}
+                </a>
+              ) : (
+                item.text
+              )}
             </p>
           </div>
         ))}
@@ -78,6 +84,7 @@ Personal.defaultProps = {
       key: 'linkedin',
       icon: <LinkIcon className="fill-[#449399] w-7 h-7" />,
       text: 'linkedin.com/in/luuvantien',
+      ref: 'https://www.linkedin.com/in/luuvantien/',
     },
   ],
 };

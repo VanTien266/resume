@@ -59,7 +59,7 @@ const Experiences = (props: any) => {
                     )}
                   </ul>
                 </div>
-                <div className="">
+                <div>
                   <span className="text-[#449399] italic">Team size: </span>
                   {Object.values(project.teamMembers).reduce(
                     (acc: number, i: any) => acc + i,

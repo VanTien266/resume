@@ -3,7 +3,7 @@ import { PuzzlePieceIcon } from '@heroicons/react/24/solid';
 const Skills = (props: any) => {
   const { skills } = props;
   return (
-    <div className="flex flex-col mb-2 pr-6">
+    <div className="flex flex-col mb-4 pr-6">
       <div className="flex justify-start">
         <div className="w-11 h-11 rounded-full border-2 border-[#313c4e] flex justify-center items-center mr-3">
           <PuzzlePieceIcon className="w-7 h-7 fill-[#313c4e]" />

@@ -4,7 +4,6 @@ import {
   LinkIcon,
   MapPinIcon,
   PhoneIcon,
-  UserCircleIcon,
 } from '@heroicons/react/24/solid';
 import Image from 'next/image';
 

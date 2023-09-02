@@ -14,7 +14,7 @@ const PersonalProjects = (props: any) => {
         </div>
       </div>
       <div>
-        {personalProjects.map((personalProject: any, index: number) => (
+        {personalProjects.map((personalProject: any) => (
           <div key={personalProject.key} className="px-2 py-1 text-base">
             <div className="text-2xl">{personalProject.name}</div>
             <div className="italic text-[#449399]">

@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import Achivements from '~/components/informations/Achivements';
 import Educations from '~/components/informations/Educations';
 import Experiences from '~/components/informations/Experiences';

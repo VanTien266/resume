@@ -1,7 +1,7 @@
 import { AcademicCapIcon } from '@heroicons/react/24/solid';
 import { format, parseISO } from 'date-fns';
 
-const Educations = (props: any) => {
+function Educations(props: any) {
   const { educations } = props;
   return (
     <div className="flex flex-col mb-2 pr-6">
@@ -32,7 +32,7 @@ const Educations = (props: any) => {
               {education.details.map(
                 (responsibility: string, index: number) => (
                   <li key={index} className="relative pl-4">
-                    <span className="absolute top-3 left-0 transform -translate-y-1/2 w-2 h-2 rounded-full bg-[#449399]"></span>
+                    <span className="absolute top-3 left-0 transform -translate-y-1/2 w-2 h-2 rounded-full bg-[#449399]" />
                     {responsibility}
                   </li>
                 )
@@ -43,7 +43,7 @@ const Educations = (props: any) => {
       </div>
     </div>
   );
-};
+}
 
 Educations.defaultProps = {
   educations: [

@@ -1,12 +1,12 @@
 import {
-  // Cog6ToothIcon
+  Cog6ToothIcon,
 } from '@heroicons/react/24/solid';
 
-const Options = () => {
+function Options() {
   return (
-    <div >
-
-    </div>
+    <div className=" ">
+      <Cog6ToothIcon className='w-7 h-7 fill-[#313c4e]'/>
+    </div >
   );
 };
 

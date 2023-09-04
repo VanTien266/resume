@@ -1,6 +1,6 @@
 import { PuzzlePieceIcon } from '@heroicons/react/24/solid';
 
-const Skills = (props: any) => {
+function Skills(props: any) {
   const { skills } = props;
   return (
     <div className="flex flex-col mb-4 pr-6">
@@ -31,7 +31,7 @@ const Skills = (props: any) => {
       </div>
     </div>
   );
-};
+}
 
 Skills.defaultProps = {
   skills: [

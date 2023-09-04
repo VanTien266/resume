@@ -1,7 +1,7 @@
 import { LinkIcon, SparklesIcon } from '@heroicons/react/24/solid';
 import { format, parseISO } from 'date-fns';
 
-const Achivements = (props: any) => {
+function Achivements(props: any) {
   const { achivements } = props;
   return (
     <div className="flex flex-col mb-4 pr-6">
@@ -18,7 +18,7 @@ const Achivements = (props: any) => {
           <div key={index} className="px-2 py-1 text-base">
             <div className="text-xl">
               {achivement.name}
-              <a href={achivement.ref} target="_blank" className="ml-2">
+              <a href={achivement.ref} target="_blank" className="ml-2" rel="noreferrer">
                 <LinkIcon className="w-4 h-4 fill-[#449399] inline" />
               </a>
             </div>
@@ -31,7 +31,7 @@ const Achivements = (props: any) => {
       </div>
     </div>
   );
-};
+}
 
 Achivements.defaultProps = {
   achivements: [

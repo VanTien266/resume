@@ -1,7 +1,7 @@
 import { StarIcon } from '@heroicons/react/24/solid';
 import { format, parseISO } from 'date-fns';
 
-const PersonalProjects = (props: any) => {
+function PersonalProjects(props: any) {
   const { personalProjects } = props;
   return (
     <div className="flex flex-col mb-4 pr-6">
@@ -28,7 +28,7 @@ const PersonalProjects = (props: any) => {
               {personalProject.responsbilities.map(
                 (responsbility: string, index: number) => (
                   <li key={index} className="relative pl-4">
-                    <span className="absolute top-3 left-0 transform -translate-y-1/2 w-2 h-2 rounded-full bg-[#449399]"></span>
+                    <span className="absolute top-3 left-0 transform -translate-y-1/2 w-2 h-2 rounded-full bg-[#449399]" />
                     {responsbility}
                   </li>
                 )
@@ -43,7 +43,7 @@ const PersonalProjects = (props: any) => {
       </div>
     </div>
   );
-};
+}
 
 PersonalProjects.defaultProps = {
   personalProjects: [

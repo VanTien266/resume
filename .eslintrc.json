@@ -1,14 +1,44 @@
 {
-    "extends": [
-        "next/core-web-vitals",
-        "eslint:recommended",
-        "prettier"
-    ],
-    "plugins": [
-        "prettier"
-    ],
-    "parserOptions": {
-        "project": "./tsconfig.json"
-    },
-    "rules": {}
+	"env": {
+		"browser": true,
+		"es2021": true
+	},
+	"extends": [
+		"next/core-web-vitals",
+		"plugin:react/recommended",
+		"airbnb",
+		"prettier"
+	],
+	"parser": "@typescript-eslint/parser",
+	"parserOptions": {
+		"ecmaFeatures": {
+			"jsx": true
+		},
+		"ecmaVersion": 12,
+		"sourceType": "module"
+	},
+	"plugins": ["react", "@typescript-eslint"],
+	"rules": {
+		"react/jsx-filename-extension": [
+			1,
+			{
+				"extensions": [".js", ".jsx", ".ts", ".tsx"]
+			}
+		],
+		"import/extensions": [
+			"error",
+			"always",
+			{
+				"js": "never",
+				"jsx": "never",
+				"ts": "never",
+				"tsx": "never"
+			}
+		],
+		"react/react-in-jsx-scope": 0,
+		"space-before-function-paren": 0,
+		"react/no-array-index-key": 0,
+		"no-shadow": 0,
+		"import/prefer-default-export": 0
+	}
 }

@@ -7,11 +7,11 @@ import {
 } from '@heroicons/react/24/solid';
 import Image from 'next/image';
 
-const Personal = (props: any) => {
+function Personal(props: any) {
   const { personalInformations } = props;
   return (
     <div className="flex flex-col gap-2 mb-2 h-full lg:flex-row lg:h-96">
-      <div className="bg-[#313c4e] w-full rounded-xl lg:w-3.5"></div>
+      <div className="bg-[#313c4e] w-full rounded-xl lg:w-3.5" />
       <div className="flex flex-col w-full p-5 items-center bg-[#ebebeb] rounded-l-lg sm:flex-row lg:w-2/3">
         <div className="rounded-full border-2 border-[#449399]">
           <Image
@@ -43,7 +43,7 @@ const Personal = (props: any) => {
             </div>
             <p className="text-base text-white flex items-center justify-center h-full">
               {item.ref ? (
-                <a href={item.ref} target="_blank">
+                <a href={item.ref} target="_blank" rel="noreferrer">
                   {item.text}
                 </a>
               ) : (
@@ -55,7 +55,7 @@ const Personal = (props: any) => {
       </div>
     </div>
   );
-};
+}
 
 Personal.defaultProps = {
   personalInformations: [

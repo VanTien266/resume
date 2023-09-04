@@ -2,7 +2,7 @@ import { format, parseISO } from 'date-fns';
 import { READABLE_ROLES } from '~/utils/constants';
 import { BriefcaseIcon } from '@heroicons/react/24/solid';
 
-const Experiences = (props: any) => {
+function Experiences(props: any) {
   const { experienceList } = props;
 
   return (
@@ -39,7 +39,7 @@ const Experiences = (props: any) => {
                     {project.responsibilities.map(
                       (responsibility: string, index: number) => (
                         <li key={index} className="relative pl-4">
-                          <span className="absolute top-3 left-0 transform -translate-y-1/2 w-2 h-2 rounded-full bg-[#449399]"></span>
+                          <span className="absolute top-3 left-0 transform -translate-y-1/2 w-2 h-2 rounded-full bg-[#449399]" />
                           {responsibility}
                         </li>
                       )
@@ -52,7 +52,7 @@ const Experiences = (props: any) => {
                     {project.technologies.map(
                       (technology: string, index: number) => (
                         <li key={index} className="relative pl-4">
-                          <span className="absolute top-3 left-0 transform -translate-y-1/2 w-2 h-2 rounded-full bg-[#449399]"></span>
+                          <span className="absolute top-3 left-0 transform -translate-y-1/2 w-2 h-2 rounded-full bg-[#449399]" />
                           {technology}
                         </li>
                       )
@@ -83,7 +83,7 @@ const Experiences = (props: any) => {
       </div>
     </div>
   );
-};
+}
 
 Experiences.defaultProps = {
   experienceList: [

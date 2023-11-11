@@ -1,6 +1,6 @@
-import { format, parseISO } from 'date-fns';
-import { READABLE_ROLES } from '~/utils/constants';
-import { BriefcaseIcon } from '@heroicons/react/24/solid';
+import { format, parseISO } from "date-fns";
+import { READABLE_ROLES } from "~/utils/constants";
+import { BriefcaseIcon } from "@heroicons/react/24/solid";
 
 const Experiences = (props: any) => {
   const { experienceList } = props;
@@ -21,10 +21,10 @@ const Experiences = (props: any) => {
             <div className="text-2xl font-bold">{item.role}</div>
             <div className="text-2xl">{item.company}</div>
             <div className="italic text-[#449399]">
-              {format(parseISO(item.startTime), 'MM/yyyy')} -{' '}
+              {format(parseISO(item.startTime), "MM/yyyy")} -{" "}
               {item.endTime
-                ? format(parseISO(item.endTime), 'MM/yyyy')
-                : 'Present'}
+                ? format(parseISO(item.endTime), "MM/yyyy")
+                : "Present"}
             </div>
             {item.projects.map((project: any, index: number) => (
               <div key={index} className="mb-4">
@@ -64,16 +64,18 @@ const Experiences = (props: any) => {
                   {Object.values(project.teamMembers).reduce(
                     (acc: number, i: any) => acc + i,
                     0
-                  )}{' '}
+                  )}{" "}
                   (
                   {Object.keys(project.teamMembers)
                     .map((i) =>
                       project.teamMembers[i]
-                        ? `${project.teamMembers[i]} ${READABLE_ROLES[i]}`
+                        ? `${project.teamMembers[i]} ${READABLE_ROLES[i]}${
+                            project.teamMembers[i] > 1 ? "s" : ""
+                          }`
                         : undefined
                     )
                     .filter((i) => i)
-                    .join(', ')}
+                    .join(", ")}
                   ).
                 </div>
               </div>
@@ -89,13 +91,13 @@ Experiences.defaultProps = {
   experienceList: [
     {
       key: 1,
-      role: 'Fullstack Developer',
-      company: 'TMA Solution',
-      startTime: '2022-03-01',
+      role: "Fullstack Developer",
+      company: "TMA Solution",
+      startTime: "2022-03-01",
       endTime: null,
       projects: [
         {
-          name: 'Private Market Platform',
+          name: "Private Market Platform",
           teamMembers: {
             developer: 5,
             tester: null,
@@ -107,21 +109,21 @@ Experiences.defaultProps = {
             devops: 1,
           },
           responsibilities: [
-            'Build and implement UI features base on requirements and designs with mono repo structure.',
-            'Implement user authentication feature with AWS Cognito.',
-            'Create APIs with NodeJS using AWS Lambda.',
-            'Send custom email message with AWS SQS',
-            'Write unit tests for UI and API with Jest.',
-            'Conduct sprint demos to showcase newly implemented features to the team.',
+            "Build and implement UI features base on requirements and designs with mono repo structure.",
+            "Implement user authentication feature with AWS Cognito.",
+            "Create APIs with NodeJS using AWS Lambda.",
+            "Send custom email message with AWS SQS",
+            "Write unit tests for UI and API with Jest.",
+            "Conduct sprint demos to showcase newly implemented features to the team.",
           ],
           technologies: [
-            'ReactJS (with Formik, Bootstrap, aws-amplify)',
-            'NodeJS',
-            'AWS (Cognito, API Gateway, Lambda Function, S3 Bucket, SQS, DynamoDB, Cloud Watch)',
+            "ReactJS (with Formik, Bootstrap, aws-amplify)",
+            "NodeJS",
+            "AWS (Cognito, API Gateway, Lambda Function, S3 Bucket, SQS, DynamoDB, Cloud Watch)",
           ],
         },
         {
-          name: 'UK Wealth Management',
+          name: "UK Wealth Management",
           teamMembers: {
             developer: 5,
             tester: 4,
@@ -133,27 +135,27 @@ Experiences.defaultProps = {
             devops: null,
           },
           responsibilities: [
-            'Implement new UI features and maintain existing ones base on design with micro frontend architecture, ReactJS, React hooks and Formik.',
-            'Implement and maintain REST APIs using Spring Boot.',
-            'Optimize performance through modifications to UI and SQL stored procedures.',
+            "Implement new UI features and maintain existing ones base on design with micro frontend architecture, ReactJS, React hooks and Formik.",
+            "Implement and maintain REST APIs using Spring Boot.",
+            "Optimize performance through modifications to UI and SQL stored procedures.",
           ],
           technologies: [
-            'ReactJS (with Formik, Bootstrap)',
-            'Spring Boot',
-            'Microsoft SQL Server',
+            "ReactJS (with Formik, Bootstrap)",
+            "Spring Boot",
+            "Microsoft SQL Server",
           ],
         },
       ],
     },
     {
       key: 2,
-      role: 'Intern Ship',
-      company: 'FPT Software',
-      startTime: '2022-06-01',
-      endTime: '2021-08-01',
+      role: "Intern Ship",
+      company: "FPT Software",
+      startTime: "2022-06-01",
+      endTime: "2022-08-01",
       projects: [
         {
-          name: 'Simple Quizz',
+          name: "Simple Quizz",
           teamMembers: {
             developer: 8,
             tester: null,
@@ -165,10 +167,10 @@ Experiences.defaultProps = {
             devops: null,
           },
           responsibilities: [
-            'Learn about web development.',
-            'Implement a basic quizz web application',
+            "Learn about web development.",
+            "Implement a basic quizz web application",
           ],
-          technologies: ['Springboot'],
+          technologies: ["Springboot"],
         },
       ],
     },

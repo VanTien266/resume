@@ -4,8 +4,8 @@ import {
   LinkIcon,
   MapPinIcon,
   PhoneIcon,
-} from '@heroicons/react/24/solid';
-import Image from 'next/image';
+} from "@heroicons/react/24/solid";
+import Image from "next/image";
 
 const Personal = (props: any) => {
   const { personalInformations } = props;
@@ -23,15 +23,17 @@ const Personal = (props: any) => {
           />
         </div>
         <div className="flex flex-1 flex-col gap-1 sm:px-4">
-          <div className="text-center text-5xl text-[#313c4e] sm:text-left">Luu Van Tien</div>
-          <div className="text-center text-2xl text-[#449399] sm:text-left">Fullstack Developer</div>
+          <div className="text-center text-5xl text-[#313c4e] sm:text-left">
+            Luu Van Tien
+          </div>
+          <div className="text-center text-2xl text-[#449399] sm:text-left">
+            Fullstack Developer
+          </div>
           <div className="text-base text-justify">
             Frontend Developer, with experience in many fields of Web
             development, always looking for new knowledge and willing to learn.
             My short-term goal is to be an expert Fullstack Developer and my
-            long-term goal is to be a Tech Lead, Solution Architect. I am
-            seeking a position that allows me to apply my skills to achieve our
-            goals.
+            long-term goal is to be a Tech Lead, Solution Architect.
           </div>
         </div>
       </div>
@@ -60,30 +62,30 @@ const Personal = (props: any) => {
 Personal.defaultProps = {
   personalInformations: [
     {
-      key: 'email',
+      key: "email",
       icon: <EnvelopeIcon className="fill-[#449399] w-7 h-7" />,
-      text: 'luuvantien20006@gmail.com',
+      text: "luuvantien20006@gmail.com",
     },
     {
-      key: 'phoneNumber',
+      key: "phoneNumber",
       icon: <PhoneIcon className="fill-[#449399] w-7 h-7" />,
-      text: '0826755114',
+      text: "0826755114",
     },
     {
-      key: 'address',
+      key: "address",
       icon: <MapPinIcon className="fill-[#449399] w-7 h-7" />,
-      text: 'Tan Binh, Ho Chi Minh, Viet Nam',
+      text: "Tan Phu, Ho Chi Minh, Viet Nam",
     },
     {
-      key: 'birthDay',
+      key: "birthDay",
       icon: <CalendarDaysIcon className="fill-[#449399] w-7 h-7" />,
-      text: '20 June, 2000',
+      text: "20 June, 2000",
     },
     {
-      key: 'linkedin',
+      key: "linkedin",
       icon: <LinkIcon className="fill-[#449399] w-7 h-7" />,
-      text: 'linkedin.com/in/luuvantien',
-      ref: 'https://www.linkedin.com/in/luuvantien/',
+      text: "linkedin.com/in/luuvantien",
+      ref: "https://www.linkedin.com/in/luuvantien/",
     },
   ],
 };

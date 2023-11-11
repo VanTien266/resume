@@ -1,4 +1,4 @@
-import { PuzzlePieceIcon } from '@heroicons/react/24/solid';
+import { PuzzlePieceIcon } from "@heroicons/react/24/solid";
 
 const Skills = (props: any) => {
   const { skills } = props;
@@ -35,21 +35,21 @@ const Skills = (props: any) => {
 
 Skills.defaultProps = {
   skills: [
-    { name: 'Frontend', list: ['React', 'React Hooks', 'Formik', 'Bootstrap'] },
-    { name: 'Backend', list: ['Springboot', 'NodeJS'] },
-    { name: 'Database', list: ['Microsoft SQL Server', 'MongoDB', 'DynamoDB'] },
+    { name: "Frontend", list: ["React", "React Hooks", "Formik", "Bootstrap"] },
+    { name: "Backend", list: ["Springboot", "NodeJS"] },
+    { name: "Database", list: ["Microsoft SQL Server", "MongoDB", "DynamoDB"] },
     {
-      name: 'Cloud Services',
+      name: "Cloud Services",
       list: [
-        'Cognito',
-        'API Gateway',
-        'Lambda funtion',
-        'S3 Bucket',
-        'SQS',
-        'Cloud Watch',
+        "Cognito",
+        "API Gateway",
+        "Lambda",
+        "S3 Bucket",
+        "SQS",
+        "Cloud Watch",
       ],
     },
-    { name: 'Others', list: ['Git', 'Scrum/Agile'] },
+    { name: "Others", list: ["Git", "Scrum/Agile"] },
   ],
 };
 

@@ -30,10 +30,15 @@ const Personal = (props: any) => {
             Fullstack Developer
           </div>
           <div className="text-base text-justify">
-            Frontend Developer, with experience in many fields of Web
-            development, always looking for new knowledge and willing to learn.
-            My short-term goal is to be an expert Fullstack Developer and my
-            long-term goal is to be a Tech Lead, Solution Architect.
+            A Fullstack Developer with expertise in diverse web development
+            technologies, I am deeply committed to continuous learning and
+            staying abreast of emerging trends to enrich my skill set and
+            efficiently tackle project responsibilities. Eager to embrace fresh
+            challenges, I seek roles that enable me to capitalize on my
+            knowledge and drive team success. My immediate objective is to
+            elevate my proficiency as a Fullstack Developer, while my ultimate
+            ambition is to transition into a leadership role as a Team Lead,
+            Solution Architect.
           </div>
         </div>
       </div>

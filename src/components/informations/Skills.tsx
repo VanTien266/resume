@@ -37,19 +37,23 @@ Skills.defaultProps = {
   skills: [
     { name: "Frontend", list: ["React", "React Hooks", "Formik", "Bootstrap"] },
     { name: "Backend", list: ["Springboot", "NodeJS"] },
-    { name: "Database", list: ["Microsoft SQL Server", "MongoDB", "DynamoDB"] },
+    { name: "Database", list: ["Microsoft SQL Server", "DynamoDB", "MongoDB"] },
     {
       name: "Cloud Services",
       list: [
         "Cognito",
         "API Gateway",
         "Lambda",
+        "Step Funtion",
         "S3 Bucket",
         "SQS",
         "Cloud Watch",
       ],
     },
-    { name: "Others", list: ["Git", "Scrum/Agile"] },
+    {
+      name: "Others",
+      list: ["Terraform", "Jenkins", "Docker", "Git", "Scrum/Agile"],
+    },
   ],
 };
 

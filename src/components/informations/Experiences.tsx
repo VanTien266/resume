@@ -29,55 +29,72 @@ const Experiences = (props: any) => {
             {item.projects.map((project: any, index: number) => (
               <div key={index} className="mb-4">
                 <div className="italic text-[#7c7c7c]">
-                  Project: {project.name}
+                  Project: {project.name}{" "}
+                  <span className="italic text-[#449399] text-sm">
+                    ({format(parseISO(project.startTime), "MM/yyyy")} -{" "}
+                    {item.endTime
+                      ? format(parseISO(project.endTime), "MM/yyyy")
+                      : "Present"}
+                    )
+                  </span>
                 </div>
                 <div className="px-2">
-                  <div className="font-bold text-[#449399]">
-                    Responsibilities:
-                  </div>
-                  <ul className="list-none">
-                    {project.responsibilities.map(
-                      (responsibility: string, index: number) => (
-                        <li key={index} className="relative pl-4">
-                          <span className="absolute top-3 left-0 transform -translate-y-1/2 w-2 h-2 rounded-full bg-[#449399]"></span>
-                          {responsibility}
-                        </li>
-                      )
-                    )}
-                  </ul>
-                  <div className="font-bold text-[#449399]">
-                    Technologies used:
-                  </div>
-                  <ul className="list-none">
-                    {project.technologies.map(
-                      (technology: string, index: number) => (
-                        <li key={index} className="relative pl-4">
-                          <span className="absolute top-3 left-0 transform -translate-y-1/2 w-2 h-2 rounded-full bg-[#449399]"></span>
-                          {technology}
-                        </li>
-                      )
-                    )}
-                  </ul>
+                  {project.responsibilities && (
+                    <>
+                      <div className="font-bold text-[#449399]">
+                        Responsibilities:
+                      </div>
+                      <ul className="list-none">
+                        {project.responsibilities.map(
+                          (responsibility: string, index: number) => (
+                            <li key={index} className="relative pl-4">
+                              <span className="absolute top-3 left-0 transform -translate-y-1/2 w-2 h-2 rounded-full bg-[#449399]"></span>
+                              {responsibility}
+                            </li>
+                          )
+                        )}
+                      </ul>
+                    </>
+                  )}
+                  {project.technologies && (
+                    <>
+                      <div className="font-bold text-[#449399]">
+                        Technologies used:
+                      </div>
+                      <ul className="list-none">
+                        {project.technologies.map(
+                          (technology: string, index: number) => (
+                            <li key={index} className="relative pl-4">
+                              <span className="absolute top-3 left-0 transform -translate-y-1/2 w-2 h-2 rounded-full bg-[#449399]"></span>
+                              {technology}
+                            </li>
+                          )
+                        )}
+                      </ul>
+                    </>
+                  )}
                 </div>
-                <div>
-                  <span className="text-[#449399] italic">Team size: </span>
-                  {Object.values(project.teamMembers).reduce(
-                    (acc: number, i: any) => acc + i,
-                    0
-                  )}{" "}
-                  (
-                  {Object.keys(project.teamMembers)
-                    .map((i) =>
-                      project.teamMembers[i]
-                        ? `${project.teamMembers[i]} ${READABLE_ROLES[i]}${
-                            project.teamMembers[i] > 1 ? "s" : ""
-                          }`
-                        : undefined
-                    )
-                    .filter((i) => i)
-                    .join(", ")}
-                  ).
-                </div>
+                {project.teamMembers && (
+                  <div>
+                    <span className="text-[#449399] italic">Team size: </span>
+                    {Object.values(project.teamMembers).reduce(
+                      (acc: number, i: any) => acc + i,
+                      0
+                    )}{" "}
+                    (
+                    {Object.keys(project.teamMembers)
+                      .map((i) =>
+                        project.teamMembers[i]
+                          ? `${project.teamMembers[i]} ${READABLE_ROLES[i]}${
+                              project.teamMembers[i] > 1 ? "s" : ""
+                            }`
+                          : undefined
+                      )
+                      .filter((i) => i)
+                      .join(", ")}
+                    ).
+                  </div>
+                )}
               </div>
             ))}
           </div>
@@ -91,13 +108,15 @@ Experiences.defaultProps = {
   experienceList: [
     {
       key: 1,
-      role: "Fullstack Developer",
-      company: "TMA Solution",
-      startTime: "2022-03-01",
+      role: "Software Engineer",
+      company: "CMC Global",
+      startTime: "2023-08-01",
       endTime: null,
       projects: [
         {
           name: "Private Market Platform",
+          startTime: "2023-08-01",
+          endTime: null,
           teamMembers: {
             developer: 5,
             tester: null,
@@ -109,21 +128,38 @@ Experiences.defaultProps = {
             devops: 1,
           },
           responsibilities: [
-            "Build and implement UI features base on requirements and designs with mono repo structure.",
+            "Build and implement UI features base on requirements and designs with monolithic repo structure.",
             "Implement user authentication feature with AWS Cognito.",
-            "Create APIs with NodeJS using AWS Lambda.",
-            "Send custom email message with AWS SQS",
-            "Write unit tests for UI and API with Jest.",
+            "Create APIs with NodeJS using AWS Lambda Function.",
+            "Send custom email message with AWS SQS.",
+            "Write unit/integration tests for UI, API with Jest, Jenkins and docker.",
             "Conduct sprint demos to showcase newly implemented features to the team.",
           ],
           technologies: [
             "ReactJS (with Formik, Bootstrap, aws-amplify)",
-            "NodeJS",
-            "AWS (Cognito, API Gateway, Lambda Function, S3 Bucket, SQS, DynamoDB, Cloud Watch)",
+            "NodeJS, Docker, Jenkins",
+            "AWS (Cognito, API Gateway, Lambda Function, Step Function, S3 Bucket, SQS, DynamoDB, Cloud Watch)",
+            "Third party (KYC, GreenID)",
           ],
+        },
+      ],
+    },
+    {
+      key: 2,
+      role: "Fullstack Developer",
+      company: "TMA Solution",
+      startTime: "2022-03-01",
+      endTime: "2022-07-01",
+      projects: [
+        {
+          name: "Private Market Platform",
+          startTime: "2023-03-01",
+          endTime: "2023-07-01",
         },
         {
           name: "UK Wealth Management",
+          startTime: "2023-10-01",
+          endTime: "2023-02-01",
           teamMembers: {
             developer: 5,
             tester: 4,
@@ -148,7 +184,7 @@ Experiences.defaultProps = {
       ],
     },
     {
-      key: 2,
+      key: 3,
       role: "Intern Ship",
       company: "FPT Software",
       startTime: "2022-06-01",
@@ -156,6 +192,8 @@ Experiences.defaultProps = {
       projects: [
         {
           name: "Simple Quizz",
+          startTime: "2022-06-01",
+          endTime: "2022-08-01",
           teamMembers: {
             developer: 8,
             tester: null,
@@ -166,11 +204,7 @@ Experiences.defaultProps = {
             designer: null,
             devops: null,
           },
-          responsibilities: [
-            "Learn about web development.",
-            "Implement a basic quizz web application",
-          ],
-          technologies: ["Springboot"],
+          technologies: ["Springboot", "HTML/CSS/JS"],
         },
       ],
     },
